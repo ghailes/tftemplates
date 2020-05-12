@@ -42,6 +42,7 @@ resource aws_lambda_function this {
 }
 
 ## IAM role, policies, and attachments
+## modify policy
 
 resource aws_iam_policy this {
   name   = join(var.delimiter, [var.name, var.stage, "private-lambda-policy", var.random_string.id])
